@@ -1,4 +1,8 @@
-# Kafka
+# Kafka Playground
+
+Simple Kafka setup using Docker and Python
+
+# Apache Kafka
 
 - event streaming platform; enables users to collect, store, and process data to build real-time event-driven applications
 - a single cluster is made up of brokers; broker handles producers and consumers and keeps data replicated in the cluster
@@ -10,13 +14,13 @@
 
 # Cmds
 
-## Run Kafka
+## Run Kafka and Zookeper
 
 - docker-compose -f docker-compose.yml up -d
 
 ## Topics
 
-- cd /opt/kafka\_<version>/bin
+- cd /opt/kafka_2.13-2.8.1/bin
 - docker exec -it kafka /bin/sh
 - kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic first_kafka_topic
 - kafka-topics.sh --list --zookeeper zookeeper:2181
@@ -26,8 +30,10 @@
 ## Producer
 
 - kafka-console-producer.sh --broker-list kafka:9092 --topic messages
-  {'user_id': 1, 'recipiet_id': 2, 'message': 'Hi!'}
-  {'user_id': 2, 'recipiet_id': 1, 'message': 'Bye!'}
+
+{'user_id': 1, 'recipiet_id': 2, 'message': 'Hi!'}
+
+{'user_id': 2, 'recipiet_id': 1, 'message': 'Bye!'}
 
 ## Consumer
 
