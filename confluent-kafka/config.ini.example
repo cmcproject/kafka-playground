@@ -1,0 +1,19 @@
+[default]
+bootstrap.servers={{ kafka.broker.server }}
+security.protocol=SASL_SSL
+sasl.mechanisms=PLAIN
+sasl.username=< CLUSTER API KEY >
+sasl.password=< CLUSTER API SECRET >
+
+[consumer]
+group.id=python_example_group_1
+
+# 'auto.offset.reset=earliest' to start reading from the beginning of
+# the topic if no committed offsets exist.
+auto.offset.reset=earliest
+
+[registry]
+# Required connection configs for Confluent Cloud Schema Registry
+schema.registry.url=1
+basic.auth.credentials.source=USER_INFO
+basic.auth.user.info=1

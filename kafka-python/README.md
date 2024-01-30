@@ -1,6 +1,4 @@
-# Kafka Playground
-
-Simple Kafka setup using Docker and Python
+# Simple Kafka setup using Docker and Python
 
 # Apache Kafka
 
